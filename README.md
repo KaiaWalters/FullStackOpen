@@ -56,4 +56,4 @@
 ### Part 8: GraphQL
 - [ ] Setting Up a GraphQL Server
 - [ ] Integrating React with GraphQL
-- [ ] Databas
+- [ ] Databases
