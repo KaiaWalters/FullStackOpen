@@ -5,13 +5,13 @@
 ## University of Helsinki - Full Stack Open Course Contents
 
 ### Part 0: Fundamentals of Web Apps
-- [ ] General Information
-- [ ] Fundamentals of Web Applications
+- [X] General Information
+- [X] Fundamentals of Web Applications
 
 ### Part 1: Introduction to React
-- [ ] Introduction to React
-- [ ] JavaScript Essentials
-- [ ] Component State and Event Handlers
+- [X] Introduction to React
+- [X] JavaScript Essentials
+- [X] Component State and Event Handlers
 - [ ] Complex State Management and Debugging React Applications
 
 ### Part 2: Communicating with the Server
