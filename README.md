@@ -57,3 +57,37 @@
 - [ ] Setting Up a GraphQL Server
 - [ ] Integrating React with GraphQL
 - [ ] Databases
+
+## Part 9: TypeScript
+- [ ] Background and Introduction to TypeScript
+- [ ] Getting Started with TypeScript
+- [ ] Typing an Express Application
+- [ ] Using TypeScript with React
+
+## Part 10: React Native
+- [ ] Introduction to Mobile Development with React Native
+- [ ] Setting Up the Development Environment
+- [ ] Building User Interfaces with React Native Components
+- [ ] Handling User Input and Navigation
+- [ ] Networking and Integrating APIs
+- [ ] Managing State in React Native Applications
+
+## Part 11: Continuous Integration and Continuous Deployment (CI/CD)
+- [ ] Introduction to CI/CD Concepts
+- [ ] Setting Up Continuous Integration Pipelines
+- [ ] Automated Testing and Deployment Strategies
+- [ ] Monitoring and Maintaining Applications in Production
+
+## Part 12: Containers
+- [ ] Introduction to Containerization
+- [ ] Working with Docker
+- [ ] Containerizing Applications
+- [ ] Managing Multi-Container Applications with Docker Compose
+- [ ] Deploying Containers to Production Environments
+
+## Part 13: Using Relational Databases
+- [ ] Introduction to Relational Databases
+- [ ] Setting Up and Configuring Relational Databases
+- [ ] Integrating Relational Databases with Applications
+- [ ] Writing SQL Queries and Managing Data
+- [ ] Advanced Topics in Relational Database Management
