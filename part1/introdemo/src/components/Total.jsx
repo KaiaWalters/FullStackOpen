@@ -1,16 +1,16 @@
-const Total = ({courses}) => {
+const Total = ({parts}) => {
 
-    const getTotal = (courses) => {
+    const getTotal = () => {
         let total = 0 
-        courses.forEach(course => {
-            total += course.exercises
+        parts.forEach(part => {
+            total += part.exercises
         })
         return total
     } 
     
     return (
       <div>
-        <p>Number of exercises {getTotal(courses)}</p>
+        <p>Number of exercises {getTotal(parts)}</p>
       </div>
     )
 }

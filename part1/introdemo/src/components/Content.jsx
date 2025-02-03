@@ -1,16 +1,15 @@
-import Part from "./Part"
+import PartComponent from "./Part"
 
-const Content = ({courses}) => {
+const Content = ({parts}) => {
     return (
       <div>
-        {courseBuilder(courses)}
+        {Part(parts)}
       </div>
     )
   }
   
-  const courseBuilder = (courses) => {
-    console.log(courses)
-    return courses.map(course => <Part key={course.part} course={course}/>)  
+  const Part = (parts) => {
+    return parts.map(part => <PartComponent key={part.name} part={part}/>)  
   }
 
   export default Content

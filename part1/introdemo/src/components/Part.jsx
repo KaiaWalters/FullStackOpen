@@ -1,12 +1,12 @@
 
-const Part = ({course}) => {
+const PartComponent = ({part}) => {
     return (
       <div>
-       <p>part{course.part} {course.exercises}</p>  
+       <p>{part.name} {part.exercises}</p>  
       </div>
     )
   }
 
-  export default Part
+  export default PartComponent
 
 
