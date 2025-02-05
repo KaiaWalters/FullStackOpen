@@ -12,7 +12,8 @@
 - [X] Introduction to React
 - [X] JavaScript Essentials
 - [X] Component State and Event Handlers
-- [ ] Complex State Management and Debugging React Applications
+- [X] Complex State Management and Debugging React Applications
+- [ ] ASCEND PROJECT: DARK MODE PORTFOLIO 
 
 ### Part 2: Communicating with the Server
 - [ ] Rendering Collections and Modules
