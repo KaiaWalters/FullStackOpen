@@ -1,6 +1,8 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import StatisticLine from './StatisticLine'
+import Button from './Button'
 
 const App = () => {
   const [good, setGood] = useState(0)
@@ -10,13 +12,6 @@ const App = () => {
   const [positive, setPositive] = useState(0)
   const [total, setTotal] = useState(0)
 
-
-  enum feedback {
-    good = 'good',
-    neutral = 'neutral',
-    bad = 'bad'
-  }
-
   useEffect(() => {
     getAverage()
     getTotal()
@@ -24,6 +19,24 @@ const App = () => {
 
     getPositive()
   }),[good, neutral, bad]
+
+  enum feedback {
+    good = 'good',
+    neutral = 'neutral',
+    bad = 'bad'
+  }
+  
+  const addValue = (feedback) => {
+    if(feedback === 'good') {
+      setGood(good + 1)
+    }else if(feedback === 'bad') {
+      setBad(bad + 1)
+    }else if(feedback === 'neutral') {
+      setNeutral(neutral+1)
+    }else {
+      console.log('error')
+    }
+  }
 
   const getAverage = () => {
     let total = good + neutral + bad
@@ -46,26 +59,15 @@ const App = () => {
     }
     setPositive(positive)
   }
-  
-  const addValue = (feedback) => {
-    if(feedback === 'good') {
-      setGood(good + 1)
-    }else if(feedback === 'bad') {
-      setBad(bad + 1)
-    }else if(feedback === 'neutral') {
-      setNeutral(neutral+1)
-    }else {
-      console.log('error')
-    }
-  }
 
   return (
     <div>
       <h1>Give feedback</h1>
 
-      <button onClick={() => addValue(feedback.good)}>good</button>
-      <button onClick={() => addValue(feedback.neutral)}>neutral</button>
-      <button onClick={() => addValue(feedback.bad)}>bad</button>
+      <Button title={"good"} onClickAction={() => addValue(feedback.good)}/>
+      <Button title={"neutral"} onClickAction={() => addValue(feedback.neutral)}/>
+      <Button title={"bad"} onClickAction={() => addValue(feedback.bad)}/>
+
 
       <h1>Statistics</h1>
       { total === 0 ? <span>No feedback given</span> :
@@ -73,9 +75,9 @@ const App = () => {
             <span>good: {good}</span><br/>
             <span>neutral: {neutral}</span><br/>
             <span>bad: {bad}</span><br/>
-            <span>all: {total}</span> <br/>
-            <span>average: {`${average} %`}</span><br/>
-            <span>positive: {`${positive} %`} </span>
+            <StatisticLine title={"all"} value={total}/>
+            <StatisticLine title={"average"} value={average}/>
+            <StatisticLine title={"positive"} value={positive}/>
         </div>
       }
     </div>
