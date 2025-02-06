@@ -4,6 +4,10 @@ import Section from './components/Section';
 
 import './App.css'
 
+// Create a request for portfolio data 
+// Create a secret second route to submit portfolio data
+// Dont forget to host the portfolio site once the bare minimum is complete
+
 function App() {
   const [darkMode, setDarkMode] = useState(false)
 
@@ -19,11 +23,16 @@ function App() {
         setDarkMode(event.target.checked)
       }
       />
-      
-      <Section headerText="Section 1">
+
+      <Section headerText="About Me">
         <p>This is the first section.</p>
       </Section>
 
+      <Section headerText="Projects">
+      </Section>
+
+      <Section headerText="Contact">
+      </Section>
     </div>
   )
 }
