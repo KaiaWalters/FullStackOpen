@@ -13,7 +13,7 @@
 - [X] JavaScript Essentials
 - [X] Component State and Event Handlers
 - [X] Complex State Management and Debugging React Applications
-- [X] [ASCEND PROJECT: DARK MODE PORTFOLIO](https://theformfolio.netlify.app/admin)
+- [X] [ASCEND PROJECT: DARK MODE PORTFOLIO](https://theformfolio.netlify.app)
 
 ### Part 2: Communicating with the Server
 - [ ] Rendering Collections and Modules
