@@ -41,8 +41,8 @@
 - [ ] End-to-End Testing
 
 ### Part 6: Advanced State Management
-- [ ] Flux Architecture and Introduction to Redux
-- [ ] Managing Multiple Reducers
+- [X] Flux Architecture and Introduction to Redux
+- [X] Managing Multiple Reducers
 - [ ] Server Communication in Redux Applications
 - [ ] Exploring React Query, `useReducer`, and the Context API
 
