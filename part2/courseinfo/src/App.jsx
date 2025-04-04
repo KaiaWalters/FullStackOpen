@@ -1,49 +1,58 @@
-import { useEffect, useState } from "react"
 import Course from "./components/Course"
 
 const App = () => {
-
-  let [total, setTotal] = useState(0)
-
-  const courseStore = {
-    id: 1,
-    name: 'Half Stack application development',
-    parts: [
+  const courseStore = [
       {
-        name: 'Fundamentals of React',
-        exercises: 10,
-        id: 1
-      },
+        name: 'Half Stack application development',
+        id: 1,
+        parts: [
+          {
+            name: 'Fundamentals of React',
+            exercises: 10,
+            id: 1
+          },
+          {
+            name: 'Using props to pass data',
+            exercises: 7,
+            id: 2
+          },
+          {
+            name: 'State of a component',
+            exercises: 14,
+            id: 3
+          },
+          {
+            name: 'Redux',
+            exercises: 11,
+            id: 4
+          }
+        ]
+      }, 
       {
-        name: 'Using props to pass data',
-        exercises: 7,
-        id: 2
-      },
-      {
-        name: 'State of a component',
-        exercises: 14,
-        id: 3
+        name: 'Node.js',
+        id: 2,
+        parts: [
+          {
+            name: 'Routing',
+            exercises: 3,
+            id: 1
+          },
+          {
+            name: 'Middlewares',
+            exercises: 7,
+            id: 2
+          }
+        ]
       }
-    ]
-  }
-
-  useEffect(() => {
-    const totalExercises = (course) => {
-      let sum = 0 
-      course.parts.forEach(part => {
-        sum += part.exercises
-      }) 
-      setTotal(sum)
-    } 
-
-    totalExercises(courseStore)
-  }, [courseStore])
+  ]
 
   return <>
-      <Course course={courseStore} />
-      <span>total of {total} exercises</span>
+  {
+    courseStore.map((course) => (
+      <Course key={course.id} course={course}/>
+    ))
+  }
   </>
-
 }
 
 export default App
