@@ -1,7 +1,11 @@
+import { useEffect, useState } from "react"
 import Course from "./components/Course"
 
 const App = () => {
-  const course = {
+
+  let [total, setTotal] = useState(0)
+
+  const courseStore = {
     id: 1,
     name: 'Half Stack application development',
     parts: [
@@ -23,7 +27,23 @@ const App = () => {
     ]
   }
 
-  return <Course course={course} />
+  useEffect(() => {
+    const totalExercises = (course) => {
+      let sum = 0 
+      course.parts.forEach(part => {
+        sum += part.exercises
+      }) 
+      setTotal(sum)
+    } 
+
+    totalExercises(courseStore)
+  }, [courseStore])
+
+  return <>
+      <Course course={courseStore} />
+      <span>total of {total} exercises</span>
+  </>
+
 }
 
 export default App

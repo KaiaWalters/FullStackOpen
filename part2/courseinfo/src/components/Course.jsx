@@ -1,16 +1,23 @@
-import {PartComponent} from './Part'
-import {Header} from './Header'
+import PartComponent from './Part'
+import Header from './Header'
 
 const Course = ({course}) => {
-
+    console.log(course.parts[0].name)
     return (
-        <div key={course.key}>
-            <Header title={course.name}/>
-            {course.parts.map((part, index) => {
-                <PartComponent key={index} part={part}/>
-            })}
+        <div>
+          <Header title={course.name}/>
+          {
+            course.parts.map(part => (
+              <PartComponent key={part.id} part={part}/>
+            ))
+          }
         </div>
     )
 }
 
 export default Course 
+
+
+// <Header title={course}/>
+// {course.parts.map((part) => {
+// })}
